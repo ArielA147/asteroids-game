@@ -1,0 +1,92 @@
+###############################
+# README for: Asteroids.
+###############################
+
+###############################
+# files in this project:
+ship.py
+asteroid.py
+torpedo.py
+asteroids_main.py
+README
+AUTHORS
+###############################
+
+###############################
+# internet websites that we used:
+https://docs.python.org/2/library/math.html
+http://pythoncentral.io/how-to-generate-a-random-number-in-python/
+https://stackoverflow.com/questions/252703/append-vs-extend
+https://www.tutorialspoint.com/python/list_extend.htm
+https://wiki.python.org/moin/TimeComplexity
+###############################
+
+###############################
+#description of ex:
+
+ex9.py is a game of Asteroids.
+
+the user tries to hit with bombs the moving ships, by placing a bomb
+coordinate in every turn of the game.
+
+in the ex9.py there are 4 files that are used for the game :
+1. asteroid.py - represents the asteroid object.
+2. torpedo.py - represents the torpedo object.
+3. ship.py - represents the ship object.
+4. asteroids_main.py - class that represents the Asteroids game .
+
+###############################
+
+###############################
+# Theory Part - Considerations that were in the design
+###############################
+
+1. Where to create move objects method :
+Our choice :
+To write the method in the GameRunner class.
+The reason we chose ours:
+The method of the move is the same for all game objects. Therefor the method
+could get every time the object that needed to move as parameter.
+Reduce duplicates in code.
+
+Other option : To create the method in every game object class.
+Advantage of this option:
+If the formula for move changes for one of the objects of the game, the change
+will be specified for the object instead of all of them.
+
+
+2. Where to create the position of the asteroid :
+Our choice :
+To create the new position in the GameRunner class .
+The reason we chose ours:
+Every time a new asteroid was created we were needed to check if the
+asteroid's position isn't the same as the ship .
+In order to do this check we were needed to import the class of the ship
+object to the class of the asteroid.
+We wanted to separate the classes of the different game objects.
+In the class of the GameRunner we had all the game objects,
+specific - the ship object and its position, and we could do the check in one
+place in the code.
+
+other option : to create the new position in the Asteroid class.
+advantage of this option:
+In one class we handle all the features of the asteroid object.
+
+
+3. Where to create the split of asteroids after a hit by torpedo
+our choice :
+To create the split of asteroids in the GameRunner class
+the reason we chose ours:
+Every time an asteroid needed to be split , the asteroid will be deleted
+form the game screen (import from Screen) and list of the asteroids that
+are still in the game (exists in the GameRunner).
+When we create the new asteroids after the collision , their new speed is
+calculated according to speed of the torpedo. In order to use the torpedo's
+speed we need to import the Torpedo class to the Asteroids class.
+We wanted to separate the classes of the different game objects.
+In the class of the GameRunner we have the torpedo object and the updated
+asteroids.
+
+other option : create the split of asteroids in the Asteroid class
+advantage of this option:
+In one class we handle all the features of the asteroid object.
