@@ -8,28 +8,18 @@ ship.py
 asteroid.py
 torpedo.py
 asteroids_main.py
+screen.py
 README
-AUTHORS
-###############################
-
-###############################
-# internet websites that we used:
-https://docs.python.org/2/library/math.html
-http://pythoncentral.io/how-to-generate-a-random-number-in-python/
-https://stackoverflow.com/questions/252703/append-vs-extend
-https://www.tutorialspoint.com/python/list_extend.htm
-https://wiki.python.org/moin/TimeComplexity
 ###############################
 
 ###############################
 #description of ex:
 
-ex9.py is a game of Asteroids.
+The program is a game of Asteroids.
 
-the user tries to hit with bombs the moving ships, by placing a bomb
-coordinate in every turn of the game.
+the user tries to hit with bombs the moving ships, by placing a bomb coordinate in every turn of the game.
 
-in the ex9.py there are 4 files that are used for the game :
+there are 4 files that are used for the game :
 1. asteroid.py - represents the asteroid object.
 2. torpedo.py - represents the torpedo object.
 3. ship.py - represents the ship object.
